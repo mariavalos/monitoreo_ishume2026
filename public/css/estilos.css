@@ -1,0 +1,141 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+body {
+    margin: 0;
+    padding: 30px;
+    background-color: #111111;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1 {
+    color: #ff9800;
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   TARJETAS
+========================= */
+
+.tarjetas {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.tarjeta {
+    background-color: #1e1e1e;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    width: 220px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.tarjeta h3 {
+    margin: 0;
+    font-size: 15px;
+    color: #dddddd;
+}
+
+.tarjeta p {
+    margin-top: 15px;
+    margin-bottom: 0;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ff9800;
+}
+
+
+/* =========================
+   BOTÓN AGREGAR
+========================= */
+
+.boton-agregar {
+    margin-bottom: 20px;
+}
+
+.btn-agregar {
+    display: inline-block;
+    background-color: #ff9800;
+    color: #111111;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.btn-agregar:hover {
+    background-color: #ffb74d;
+}
+
+
+/* =========================
+   TABLA
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1e1e1e;
+}
+
+th {
+    background-color: #222222;
+    color: white;
+    padding: 14px 10px;
+    text-align: left;
+}
+
+td {
+    padding: 13px 10px;
+    border-bottom: 1px solid #333333;
+    color: #eeeeee;
+}
+
+tr:hover {
+    background-color: #292929;
+}
+
+
+/* =========================
+   BOTONES EDITAR / BORRAR
+========================= */
+
+.acciones {
+    white-space: nowrap;
+}
+
+.btn-editar {
+    display: inline-block;
+    background-color: #2196f3;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 5px;
+}
+
+.btn-borrar {
+    display: inline-block;
+    background-color: #e53935;
+    color: white;
+    padding: 7px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
