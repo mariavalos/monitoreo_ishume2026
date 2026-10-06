@@ -1,0 +1,38 @@
+/*DASHBOARD*/
+
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+.contenido {
+    flex: 1;
+    padding: 30px;
+    background-color: var(--negro);
+}
+
+/* Encabezado */
+
+.titulo {
+    margin-bottom: 30px;
+}
+
+.titulo h1 {
+    font-size: 30px;
+    color: var(--blanco);
+    margin-bottom: 8px;
+}
+
+.titulo p {
+    color: var(--gris-texto);
+    font-size: 15px;
+}
+
+/* Parte superior del dashboard */
+
+.encabezado-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}

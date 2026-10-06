@@ -1,0 +1,77 @@
+/* FORMULARIO */
+
+.formulario {
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--negro-secundario);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+/* CAMPOS */
+
+.formulario div {
+    margin-bottom: 20px;
+}
+
+.formulario label {
+    display: block;
+    color: var(--gris-texto);
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: var(--negro);
+    color: var(--blanco);
+    border: 1px solid var(--gris-borde);
+    border-radius: 6px;
+    outline: none;
+}
+
+/* CUANDO SE SELECCIONA EL CAMPO */
+
+.formulario input:focus {
+    border-color: var(--naranja);
+}
+
+/* BOTONES */
+
+.botones-formulario {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.btn-guardar {
+    background-color: var(--naranja);
+    color: var(--blanco);
+    border: none;
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-guardar:hover {
+    background-color: var(--blanco);
+    color: var(--negro);
+}
+
+.btn-cancelar {
+    background-color: var(--gris);
+    color: var(--blanco);
+    padding: 11px 20px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.btn-cancelar:hover {
+    background-color: var(--gris-borde);
+}

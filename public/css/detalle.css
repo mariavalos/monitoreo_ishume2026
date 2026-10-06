@@ -1,0 +1,176 @@
+/* ==============================
+   DETALLE DEL PRACTICANTE
+   ISHUME 2026
+============================== */
+
+.volver {
+    display: inline-block;
+    color: var(--naranja);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.volver:hover {
+    color: var(--blanco);
+}
+
+
+/* TÍTULO */
+
+.titulo-detalle {
+    margin-bottom: 35px;
+}
+
+.titulo-detalle h1 {
+    color: var(--blanco);
+    font-size: 32px;
+}
+
+
+/* CONTENIDO */
+
+.detalle-contenido {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+
+/* TARJETAS */
+
+.tarjeta-detalle {
+    background-color: var(--negro-secundario);
+    border: 1px solid var(--gris-borde);
+    border-radius: 10px;
+}
+
+
+/* INFORMACIÓN PERSONAL */
+
+.informacion-personal {
+    padding: 30px;
+}
+
+.titulo-tarjeta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.titulo-tarjeta h2,
+.tarjeta-pequena h2 {
+    color: var(--gris-texto);
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+
+/* ESTADO */
+
+.estado-detalle {
+    color: var(--naranja);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+/* DATOS */
+
+.dato {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--gris-borde);
+}
+
+.dato:last-child {
+    border-bottom: none;
+}
+
+.dato span {
+    color: var(--gris-suave);
+    font-size: 13px;
+}
+
+.dato strong {
+    color: var(--blanco);
+    font-size: 14px;
+}
+
+
+/* INFORMACIÓN LATERAL */
+
+.informacion-lateral {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tarjeta-pequena {
+    padding: 26px;
+}
+
+.tarjeta-pequena h2 {
+    margin-bottom: 16px;
+}
+
+.tarjeta-pequena strong {
+    color: var(--blanco);
+    font-size: 15px;
+}
+
+.tarjeta-pequena p {
+    color: var(--gris-suave);
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+
+/* CALIFICACIÓN */
+
+.calificacion {
+    color: var(--verde);
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+
+/* BOTONES */
+
+.acciones-detalle {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.btn-editar-detalle {
+    background-color: var(--naranja);
+    color: var(--negro);
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-editar-detalle:hover {
+    background-color: var(--blanco);
+}
+
+
+.btn-eliminar-detalle {
+    background-color: transparent;
+    color: var(--rojo);
+    border: 1px solid var(--rojo);
+    padding: 13px 22px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.btn-eliminar-detalle:hover {
+    background-color: var(--rojo);
+    color: var(--blanco);
+}

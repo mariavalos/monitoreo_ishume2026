@@ -1,0 +1,57 @@
+/* ==============================
+   MENÚ LATERAL
+   ISHUME 2026
+============================== */
+
+.menu {
+    width: 240px;
+    min-height: 100vh;
+    background-color: var(--negro-secundario);
+    padding: 25px 20px;
+}
+
+/* Logo */
+
+.logo {
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 210px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Opciones del menú */
+
+.menu a {
+    display: block;
+    color: var(--gris-texto);
+    padding: 12px 18px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/* Cuando pasamos el mouse */
+
+.menu a:hover {
+    background-color: var(--gris);
+    color: var(--naranja);
+}
+
+/* Opción seleccionada */
+
+.menu a.activo {
+    background-color: var(--gris);
+    color: var(--blanco);
+    border-left: 3px solid var(--naranja);
+}

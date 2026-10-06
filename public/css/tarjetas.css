@@ -1,0 +1,30 @@
+ /* TARJETAS DEL DASHBOARD */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.tarjeta {
+    background-color: var(--negro-secundario);
+    border: 1px solid var(--gris-borde);
+    border-radius: 8px;
+    padding: 22px;
+    min-height: 130px;
+}
+
+.tarjeta h3 {
+    color: var(--gris-texto);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-bottom: 15px;
+}
+
+.tarjeta .numero {
+    color: var(--blanco);
+    font-size: 32px;
+    font-weight: 700;
+}
