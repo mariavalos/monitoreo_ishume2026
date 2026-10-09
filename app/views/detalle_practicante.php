@@ -1,7 +1,27 @@
 <?php
-require_once "../../config/conexion.phh";
-$id = $_GET["id"];
-$sql = "SELECT * FROM practicantes WHERE id = $id";
+require_once "../../config/conexion.php";
+$id = (int) $_GET["id"];
+
+$sql = "SELECT
+            practicantes.*,
+            colegios.nombre AS colegio,
+            seguimiento.estado,
+            seguimiento.fecha_inicio,
+            seguimiento.fecha_limite,
+            calificacion.calificacion_actual,
+            calificacion.calificacion_desaprobatoria,
+            calificacion.resultado
+        FROM practicantes
+        LEFT JOIN seguimiento
+            ON practicantes.id = seguimiento.id_practicante
+        LEFT JOIN sesion
+            ON seguimiento.id_sesion = sesion.id_sesion
+        LEFT JOIN colegios
+            ON sesion.id_colegio = colegios.id_colegio
+        LEFT JOIN calificacion
+            ON seguimiento.id_calificacion = calificacion.id_calificacion
+        WHERE practicantes.id = $id";
+
 $resultado = $conexion->query($sql);
 $practicante = $resultado->fetch_assoc();
 ?>
@@ -40,53 +60,52 @@ $practicante = $resultado->fetch_assoc();
                 <h1>DETALLE DEL PRACTICANTE</h1>
             </div>
             <div class="detalle-contenido">
-                <section class="tarjeta-detalle informacion-personal"></section>
-                <div class="titulo-tarejta">
-                    <h2>INFORMACION PERSONAL</h2>
-                    <span class="estado-detalle">
-                        - ACTIVO
-                    </span>
-                </div>
-                <div class="dato">
-                    <span>DNI</span>
-                    <strong>61341087</strong>
-                </div>
-                <div class="dato">
-                    <span>Nombres</span>
-                    <strong>VALEY FABIANA</strong>
-                </div>
-                <div class="dato">
-                    <span>Apellidos</span>
-                    <strong>FELIX MORALES</strong>
-                </div>
-                <div class="dato">
-                    <span>Telefono</span>
-                    <strong>962986673</strong>
-                </div>
-                <div class="dato">
-                    <span>Carrera</span>
-                    <strong>DISEÑO</strong>
-                </div>
+                <section class="tarjeta-detalle informacion-personal">
+                    <div class="titulo-tarjeta">
+                        <h2>INFORMACION PERSONAL</h2>
+                        <span class="estado-detalle">- ACTIVO</span>
+                    </div>
+                    <div class="dato">
+                        <span>DNI</span>
+                        <strong><?php echo $practicante['DNI']; ?></strong>
+                    </div>
+                    <div class="dato">
+                        <span>Nombres</span>
+                        <strong><?php echo $practicante['nombres']; ?></strong>
+                    </div>
+                    <div class="dato">
+                        <span>Apellidos</span>
+                        <strong><?php echo $practicante['apellidos']; ?></strong>
+                    </div>
+                    <div class="dato">
+                        <span>Telefono</span>
+                        <strong><?php echo $practicante['telefono']; ?></strong>
+                    </div>
+                    <div class="dato">
+                        <span>Carrera</span>
+                        <strong><?php echo $practicante['carrera']; ?></strong>
+                    </div>
+                </section>
                 <section>
                     <div class="informacion-lateral">
-                        <section class="tarjeta-detalle tarjeta-pequeña">
+                        <section class="tarjeta-detalle tarjeta-pequena">
                             <h2>COLEGIO</h2>
-                            <strong>PAULINO REATEGUI - INICIAL</strong>
+                            <strong><?php echo $practicante['colegio'] ?? "Sin colegio asignado";?></strong>
                         </section>
-                        <section class="tarjeta-detalle tarjeta-pequeña">
-                            <h2>Seguimiento</h2>
-                            <strong>ACTIVO</strong>
-                            <p>Limite: 2026-0-11</p>
+                        <section class="tarjeta-detalle tarjeta-pequena">
+                            <h2>SEGUIMIENTO</h2>
+                            <strong><?php echo $practicante['estado'];?></strong>
+                            <p>Limite: <?php echo $practicante['fecha_limite'];?></p>
                         </section>
-                        <section class="tarjeta-detalle tarjeta-pequeña">
+                        <section class="tarjeta-detalle tarjeta-pequena">
                             <h2>CALIFICACION</h2>
-                            <div class="calificacion">12</div>
+                            <div class="calificacion"><?php echo $practicante['calificacion_actual'];?></div>
                             <p>Nota minima: 10.5</p>
                         </section>
                     </div>
                 </section>
             </div>
-            <div class="acciones-detalles">
+            <div class="acciones-detalle">
                 <a href="#" class="btn-editar-detalle">EDITAR INFORMACION</a>
                 <a href="#" class="btn-eliminar-detalle">ELIMINAR</a>
             </div>
