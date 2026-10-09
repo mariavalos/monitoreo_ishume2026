@@ -100,7 +100,7 @@
                                         </span>
                                     </td>
                                     <td>
-                                        <a href="#" class="btn-ver">VER -></a>
+                                        <a href="/monitoreo_ishume_2026/app/views/detalle_practicante.php?id=<?php echo $practicante['id'];?>" class="btn-ber">VER -></a>
                                     </td>
                                 </tr>
                                 <?php endforeach; ?>

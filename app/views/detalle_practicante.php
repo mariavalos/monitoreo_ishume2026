@@ -1,3 +1,11 @@
+<?php
+require_once "../../config/conexion.phh";
+$id = $_GET["id"];
+$sql = "SELECT * FROM practicantes WHERE id = $id";
+$resultado = $conexion->query($sql);
+$practicante = $resultado->fetch_assoc();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
